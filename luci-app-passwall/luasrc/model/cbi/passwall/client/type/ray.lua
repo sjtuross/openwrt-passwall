@@ -255,6 +255,9 @@ o:value("", translate("Disable"))
 o:value("xtls-rprx-vision")
 o:depends({ [option_name("protocol")] = "vless", [option_name("tls")] = true, [option_name("transport")] = "tcp" })
 
+o = s:option(Value, option_name("alter_id"), translate("Alter ID"))
+o:depends({ [option_name("protocol")] = "vmess" })
+
 o = s:option(Flag, option_name("tls"), translate("TLS"))
 o.default = 0
 o:depends({ [option_name("protocol")] = "vmess" })

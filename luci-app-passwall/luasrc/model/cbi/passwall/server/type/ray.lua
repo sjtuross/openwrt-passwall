@@ -105,6 +105,9 @@ o:depends({ [option_name("protocol")] = "vmess" })
 o:depends({ [option_name("protocol")] = "vless" })
 o:depends({ [option_name("protocol")] = "trojan" })
 
+o = s:option(Value, option_name("alter_id"), translate("Alter ID"))
+o:depends({ [option_name("protocol")] = "vmess" })
+
 o = s:option(ListValue, option_name("flow"), translate("flow"))
 o.default = ""
 o:value("", translate("Disable"))
